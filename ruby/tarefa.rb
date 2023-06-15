@@ -6,18 +6,9 @@ print("\n Introduza a nota de Português: ")
 pt = gets.chomp.to_f
 print("\n Introduza a nota de Ciências: ")
 cie = gets.chomp.to_f
-print("\n Introduza a nota de Ciências: ")
-print("\n Nome: #{nome}")
-print("\n   Matemática: #{mat}")
-print("\n   Português: #{pt}")
-print("\n   Ciências: #{cie}")
-media= (mat+pt+cie)/3
-print("\n   Média: #{media}")
 
-if(media < 4)
-    print ("\n Situação: Reprovado\n")
-elsif(media < 6.9)
-    print ("\n Situação: Recuperação\n")
-else
-    print ("\n Situação: Aprovado\n")
-end
+media= (mat+pt+cie)/3
+
+resultado = media < 4 ? "Reprovado" : ((media >= 5 && media < 6.9) ? "Recuperação" : "Aprovado")
+
+print("\n Nome: #{nome}\n   Matemática: #{mat}\n   Português: #{pt}\n   Ciências: #{cie}\n   Média: #{media}\nSituação: #{resultado}\n")
